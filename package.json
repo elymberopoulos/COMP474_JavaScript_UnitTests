@@ -1,0 +1,28 @@
+{
+  "name": "hw1part2",
+  "version": "1.0.0",
+  "description": "This is Eric Lymberopoulos's code for HW1 part 2.",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "Software",
+    "Engineering",
+    "Mocha",
+    "Chai",
+    "Node",
+    "Test",
+    "Testing"
+  ],
+  "author": "Eric Lymberopoulos",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0"
+  }
+}
