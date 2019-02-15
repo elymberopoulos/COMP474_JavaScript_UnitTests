@@ -4,7 +4,8 @@
   "description": "This is Eric Lymberopoulos's code for HW1 part 2.",
   "main": "main.js",
   "directories": {
-    "test": "test"
+    "test": "test",
+    "source": "src"
   },
   "scripts": {
     "test": "nyc mocha || true"
