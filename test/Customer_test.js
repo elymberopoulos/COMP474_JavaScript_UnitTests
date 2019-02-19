@@ -26,4 +26,4 @@ describe("Testing for Customer class.", function(){
             assert.isFalse(mary.getTaxStatus());
         });
     });
-})
+});

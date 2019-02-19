@@ -1,22 +1,14 @@
-class ShoppingCart {
+//The String will be the user's name.
+function calculatePurchasePrice(customer, shoppingCart) {
 
-    //dict is an object that hold key/value pairs that represent user names
-    //and their tax excemption status.
-    constructor() {
-
-    }
-
-    //Spread operator "..." is an array parameter.
-    //The String will be the user's name.
-    calculatePurchasePrice(...shoppingCart, customer) {
-        var customerInput = customer;
+    if (shoppingCart instanceof Array) {
         //discount variable incremented for accurate percent discount.
         var discount = 0.00;
-        var returnSum = 0.00;
+        var beforeTax = 0.00;
 
         //Throw the error to keep a user from purchasing more than 50 items.
         if (shoppingCart.length > 50) {
-            throw "Too many items in your shopping cart.";
+            throw new Error("Too many items in your shopping cart.");
         }
 
         //Apply the 5% discount to the incrementer if the below requirements are met.
@@ -24,26 +16,25 @@ class ShoppingCart {
             discount += 0.05;
         }
 
-        //Apply the 5% discount to the incrementer if the below requirements are met.
-        else if (shoppingCart.length > 10) {
+        //Apply the 10% discount to the incrementer if the below requirements are met.
+        else if (shoppingCart.length > 9) {
             discount += 0.10;
         }
 
-        //
+
         for (var i = 0; i < shoppingCart.length; i++) {
-            beforeTax += shoppingCart[i].getPrice();
+            beforeTax += shoppingCart[i];
         }
+
+        beforeTax = beforeTax - (beforeTax * discount);
 
         //This boolean determined if a user is tax excempt.
-        if (customerInput === false) {
-            returnSum += returnSum * 0.045;
+        if (customer.getTaxStatus() === false) {
+            return beforeTax += beforeTax * 0.045;
         }
-
-        return returnSum;
+        else {
+            return beforeTax;
+        }
     }
-
 }
-// module.exports = {
-//     Calculator: Calculator
-// }
-module.exports.ShoppingCart = ShoppingCart;
+module.exports.calculatePurchasePrice = calculatePurchasePrice;

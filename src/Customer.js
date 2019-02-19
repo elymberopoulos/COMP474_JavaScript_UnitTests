@@ -3,15 +3,19 @@ class Customer {
         this.name = name;
         this.taxStatus = taxStatus;
     }
+
     getName() {
         return this.name;
     }
+
     setName(name) {
         this.name = name;
     }
+
     getTaxStatus() {
         return this.taxStatus;
     }
+
     setTaxStatus(newStatus) {
         this.taxStatus = newStatus;
     }

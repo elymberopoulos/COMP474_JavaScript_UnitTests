@@ -3,7 +3,7 @@ const assert = require('chai').assert;
 
 describe("Tests on mock sock object.", function () {
 
-    const mockSock = new mock.Socks;
+    const mockSock = new mock.Socks();
     
     it("Test for mock object price.", function () {
         assert.equal(mockSock.getPrice(), 1.13);
@@ -20,7 +20,7 @@ describe("Tests on mock sock object.", function () {
 
 describe("Tests on mock pants object.", function () {
 
-    const mockPants = new mock.Pants;
+    const mockPants = new mock.Pants();
 
     it("Test for mock object price.", function () {     
         assert.equal(mockPants.getPrice(), 4.30);
