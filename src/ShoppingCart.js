@@ -21,6 +21,9 @@ function calculatePurchasePrice(customer, shoppingCart) {
             discount += 0.10;
         }
 
+        if (customer.getClubMembership() === true) {
+            discount += 0.10;
+        }
 
         for (var i = 0; i < shoppingCart.length; i++) {
             beforeTax += shoppingCart[i];
@@ -30,11 +33,15 @@ function calculatePurchasePrice(customer, shoppingCart) {
 
         //This boolean determined if a user is tax excempt.
         if (customer.getTaxStatus() === false) {
-            return beforeTax += beforeTax * 0.045;
+            beforeTax += beforeTax * 0.045;
+            return beforeTax.toFixed(2);
         }
         else {
-            return beforeTax;
+            return beforeTax.toFixed(2);
         }
+    }
+    else{
+        throw Error("Cart arguement/parameter not of type array.");
     }
 }
 module.exports.calculatePurchasePrice = calculatePurchasePrice;

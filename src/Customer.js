@@ -1,7 +1,16 @@
 class Customer {
-    constructor(name, taxStatus) {
+    constructor(name, taxStatus, clubMembership) {
         this.name = name;
         this.taxStatus = taxStatus;
+        this.clubMembership = clubMembership;
+    }
+
+    getClubMembership() {
+        return this.clubMembership;
+    }
+    
+    setClubMembership(val) {
+        this.clubMembership = val;
     }
 
     getName() {
