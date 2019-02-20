@@ -60,7 +60,7 @@ describe("===== HOMEWORK TESTS =====", function () {
             assert.equal(result, 8.00);
         })
 
-        it("Check tax excemption - \n 10 one dollar items placed into cart 10% discount returns 9 then %4.5 added on should equal 9.40", function () {
+        it("Check tax excemption - \n \t 10 one dollar items placed into cart 10% discount returns 9 then %4.5 added on should equal 9.40", function () {
             var testUser = new customer.Customer('tim', false, false);
             var testVal = new Array();
             for (var i = 0; i < 10; i++) {
@@ -70,5 +70,29 @@ describe("===== HOMEWORK TESTS =====", function () {
             assert.equal(result, 9.40);
         })
 
+    })
+    describe("Tests to assert that decimals are rounding to the nearest cent ($0.01)", function(){
+        it("Check rounding down add two values to cart array (0.022 + 0.022) should equal 0.04", function(){
+            var testAmount = 0.022;
+            var testUser = new customer.Customer('tim', true, false);
+            var testVal = new Array();
+            for(var i = 0; i < 2; i++){
+                testVal.push(testAmount);
+            }
+            let result = cart.calculatePurchasePrice(testUser, testVal);
+            assert.equal(result, 0.04);
+        })
+
+        it("Check rounding up add two values to cart array (0.023 + 0.023) should equal 0.05", function(){
+            var testAmount = 0.023;
+            var testUser = new customer.Customer('tim', true, false);
+            var testVal = new Array();
+            for(var i = 0; i < 2; i++){
+                testVal.push(testAmount);
+            }
+            let result = cart.calculatePurchasePrice(testUser, testVal);
+            assert.equal(result, 0.05);
+
+        })
     })
 })
