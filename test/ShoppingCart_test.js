@@ -72,13 +72,13 @@ describe("===== HOMEWORK TESTS =====", function () {
 
     })
     describe("Tests to assert that decimals are rounding to the nearest cent ($0.01)", function(){
-        it("Check rounding down add two values to cart array (0.022 + 0.022) should equal 0.04", function(){
-            var testAmount = 0.022;
+        it("Check rounding down add two values to cart array (0.022 + 0.023) should equal 0.04", function(){
+            var testAmount1 = 0.022;
+            var testAmount2 = 0.023;
             var testUser = new customer.Customer('tim', true, false);
             var testVal = new Array();
-            for(var i = 0; i < 2; i++){
-                testVal.push(testAmount);
-            }
+            testVal.push(testAmount1);
+            testVal.push(testAmount2);
             let result = cart.calculatePurchasePrice(testUser, testVal);
             assert.equal(result, 0.04);
         })
