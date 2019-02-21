@@ -8,7 +8,7 @@
     "source": "src"
   },
   "scripts": {
-    "test": "nyc mocha || true"
+    "test": "nyc mocha --recursive || true"
   },
   "keywords": [
     "Software",

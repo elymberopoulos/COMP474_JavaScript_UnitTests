@@ -1,4 +1,4 @@
-const mock = require('../src/MockObjects');
+const mock = require('../../src/MockObjects');
 const assert = require('chai').assert;
 
 describe("Tests on mock sock object.", function () {

@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-const db = require('../src/Database');
-const mock = require('../src/MockObjects');
+const db = require('../../src/Database');
+const mock = require('../../src/MockObjects');
 
 describe("Testing the database map.", function () {
     var database = new db.Database();
