@@ -21,7 +21,7 @@
 
 
 ##Resubmission
-    ###Homework Tests
+###Homework Tests
     1. Test error handling.
       -test that error is thrown if shopping cart arguement is not of type Array (input of String)(output is an Error).
       -Test that error gets thrown if cart value is over 50 items in length (input of an Array of 51 items)(output is an Error).
@@ -34,5 +34,5 @@
       -Check rounding down - add two values to cart array (0.022 + 0.023) should equal 0.04
       -Check rounding up - add two values to cart array (0.023 + 0.023) should equal 0.05
 
-    ###Additional Tests
-        -Empty array input should return 0 from the shopping cart calculate price function
+###Additional Tests
+    -Empty array input should return 0 from the shopping cart calculate price function
