@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const customer = require('../../src/Customer');
+const customer = require('../mockObjects/Customer');
 
 describe("Testing for Customer class.", function(){
 

@@ -1,4 +1,4 @@
-const mock = require('../../src/MockObjects');
+const mock = require('../mockObjects/MockObjects');
 const assert = require('chai').assert;
 
 describe("Tests on mock sock object.", function () {
@@ -6,7 +6,7 @@ describe("Tests on mock sock object.", function () {
     const mockSock = new mock.Socks();
     
     it("Test for mock object price.", function () {
-        assert.equal(mockSock.getPrice(), 1.13);
+        assert.equal(mockSock.getPrice(), 1.00);
     });
 
     it("Test mock object is not null.", function () {

@@ -1,7 +1,7 @@
 class Socks {
     
     constructor() {
-        this.price = 1.13;
+        this.price = 1.00;
     }
     getPrice() {
         return this.price;

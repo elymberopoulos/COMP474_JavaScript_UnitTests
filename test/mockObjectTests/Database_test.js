@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-const db = require('../../src/Database');
-const mock = require('../../src/MockObjects');
+const db = require('../mockObjects/Database');
+const mock = require('../mockObjects/MockObjects');
 
 describe("Testing the database map.", function () {
     var database = new db.Database();
@@ -32,7 +32,7 @@ describe("Testing the database map.", function () {
     describe("Testing retrieving items from the database.", function(){
         it("Test retrieve socks and test the retrieved price.", function(){
             let test = database.getItem("sock");
-            assert.equal(test, 1.13);
+            assert.equal(test, 1.00);
         });
 
         it("Test string of 'Entry not found.' returned for non-existant key.", function(){

@@ -1,3 +1,8 @@
+const mockDB = require('../test/mockObjects/MockDB');
+var db = mockDB.db;
+//This mock database is loaded with item names as keys and their price as values.
+//These mock key/values pairs are specifically aimed to test this function.
+
 //The String will be the user's name.
 function calculatePurchasePrice(customer, shoppingCart) {
 
@@ -26,7 +31,7 @@ function calculatePurchasePrice(customer, shoppingCart) {
         }
 
         for (var i = 0; i < shoppingCart.length; i++) {
-            beforeTax += shoppingCart[i];
+            beforeTax += db.getItem(shoppingCart[i]);
         }
 
         beforeTax = beforeTax - (beforeTax * discount);
