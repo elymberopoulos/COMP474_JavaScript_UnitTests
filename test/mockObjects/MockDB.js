@@ -9,5 +9,8 @@ db.storage.set("pants", dbPants.getPrice());
 db.storage.set("0.022", 0.022);
 db.storage.set("0.023", 0.023);
 
+//This test database is loaded up with test values and is exported so it
+//can be required in other Node modules for testing
+
 module.exports.db = db;
 

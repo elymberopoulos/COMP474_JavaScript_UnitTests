@@ -3,7 +3,6 @@ var db = mockDB.db;
 //This mock database is loaded with item names as keys and their price as values.
 //These mock key/values pairs are specifically aimed to test this function.
 
-//The String will be the user's name.
 function calculatePurchasePrice(customer, shoppingCart) {
 
     if (shoppingCart instanceof Array) {
@@ -26,17 +25,23 @@ function calculatePurchasePrice(customer, shoppingCart) {
             discount += 0.10;
         }
 
+        //Checks to see if a customer is a club member and increments the discount calculation.
         if (customer.getClubMembership() === true) {
             discount += 0.10;
         }
-
+        
+        //This loop iterates over the list of database keys and gets they value of the key at that index.
+        //The key's value is its price.
         for (var i = 0; i < shoppingCart.length; i++) {
             beforeTax += db.getItem(shoppingCart[i]);
         }
 
+        //The return sum has the discount applied.
         beforeTax = beforeTax - (beforeTax * discount);
 
         //This boolean determined if a user is tax excempt.
+        //Based on a user's excemption status the result is either returned as is -
+        //or it has tax applied and is returned then.
         if (customer.getTaxStatus() === false) {
             beforeTax += beforeTax * 0.045;
             return beforeTax.toFixed(2);
@@ -46,7 +51,7 @@ function calculatePurchasePrice(customer, shoppingCart) {
         }
     }
     else{
-        throw Error("Cart arguement/parameter not of type array.");
+        throw new Error("Cart arguement/parameter not of type array.");
     }
 }
 module.exports.calculatePurchasePrice = calculatePurchasePrice;
