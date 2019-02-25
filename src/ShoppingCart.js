@@ -29,11 +29,16 @@ function calculatePurchasePrice(customer, shoppingCart) {
         if (customer.getClubMembership() === true) {
             discount += 0.10;
         }
-        
+
         //This loop iterates over the list of database keys and gets they value of the key at that index.
         //The key's value is its price.
         for (var i = 0; i < shoppingCart.length; i++) {
-            beforeTax += db.getItem(shoppingCart[i]);
+            if (db.storage.has(shoppingCart[i])) {
+                beforeTax += db.getItem(shoppingCart[i]);
+            }
+            else {
+                console.log("key not found " + shoppingCart[i]);
+            }
         }
 
         //The return sum has the discount applied.
@@ -50,7 +55,7 @@ function calculatePurchasePrice(customer, shoppingCart) {
             return beforeTax.toFixed(2);
         }
     }
-    else{
+    else {
         throw new Error("Cart arguement/parameter not of type array.");
     }
 }

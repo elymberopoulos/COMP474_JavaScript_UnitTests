@@ -110,4 +110,19 @@ describe("===== HOMEWORK TESTS =====", function () {
 
         })
     })
+
+    //Test that if a key is not in the database then the total price is not incrememnted.
+    describe("Test that if a key is not in the database then the total price is not incrememnted.", function(){
+        it("Insert a non-existant key/item into the shopping cart and make sure the price is not incremented and the program does not crash", function(){
+            var testUser = new customer.Customer('tim', true, false);
+            var testVal = new Array();
+            for (var i = 0; i < 3; i++) {
+                testVal.push('socks');
+            }
+            testVal.push('hat');
+
+            let result = cart.calculatePurchasePrice(testUser, testVal);
+            assert.equal(result, 3);
+        })
+    })
 })
