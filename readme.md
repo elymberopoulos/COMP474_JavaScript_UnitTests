@@ -4,6 +4,16 @@
     -1. Ensure you have Node.js installed and the environmental variables are setup correctly.
     -2. In the root directory of the project type: "npm i" to install the dependencies for the project.
     -3. Run command 'npm run test' in the terminal and test output should be visible with coverage provided by NPM's nyc package.
+
+###Developing Black Box Tests
+    -This is a breakdown of the different internal functional requirements so new developers can write their own tests.
+      1. Item getItem (String ItemID) - The mock database should have a getItem function that returns a price based
+      on an item key.
+      2. float getPrice() - Each item in the code will have a get price function which returns its price. This is the value
+      of the key value pairs in the database.
+      3. calculatePurchasePrice (List<String> ProductIDs, Customer customer) - This function calculates the shopping cart price
+      based on a variety of factors. I.E. if a customer is tax-excempt or is a shopping club member. The list will be looped through
+      looking for item names and getting those items out of the database incrememnting the return price value.
     
 
 ###Understanding Mocha Test Framework
