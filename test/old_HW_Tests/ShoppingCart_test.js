@@ -29,8 +29,8 @@ describe("===== HOMEWORK TESTS =====", function () {
             assert.throws(() => {
                 cart.calculatePurchasePrice(testUser, testVal);
             }, 'Too many items in your shopping cart.');
-        });
-    });
+        })
+    })
 
     describe("Test discount applications", function () {
 

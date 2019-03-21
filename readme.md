@@ -29,6 +29,11 @@
     -"nyc": "^13.3.0"
     
 
+#Resubmission HW1 Part 2
+    -I have changed the literal value in the shopping cart function so that it now uses >= 10 instead of a different value (9).
+    -The shopping cart function now has a "preamble" that describes its parameters and its output.
+    -The old tests are in the old_HW_Tests directory.
+    -I have added numerous BVA tests in the assignmentTests directory in the ShoppingCartBVA.js file.
 
 #Resubmission
 ###Homework Tests

@@ -3,6 +3,17 @@ var db = mockDB.db;
 //This mock database is loaded with item names as keys and their price as values.
 //These mock key/values pairs are specifically aimed to test this function.
 
+/*
+Function Preamble
+Arguments:
+- customer: A customer object that is passed that has club membership and tax statuses.
+            Depending on the different statuses different calculations are performed.
+- shoppingCart: An arraylist of strings that are product names. The names are searched
+                for in the mockDB to return their associated price.
+Return Types: This function returns a Double value with a fixed decimal position to the
+              100th place.
+*/
+
 function calculatePurchasePrice(customer, shoppingCart) {
 
     if (shoppingCart instanceof Array) {
@@ -21,7 +32,7 @@ function calculatePurchasePrice(customer, shoppingCart) {
         }
 
         //Apply the 10% discount to the incrementer if the below requirements are met.
-        else if (shoppingCart.length > 9) {
+        else if (shoppingCart.length >= 10) {
             discount += 0.10;
         }
 
