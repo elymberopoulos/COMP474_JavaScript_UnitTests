@@ -1,4 +1,5 @@
 # This the homework submission for Eric Lymberopoulos
+[![Build Status](https://travis-ci.com/elymberopoulos/COMP474_JavaScript_UnitTests.svg?branch=master)](https://travis-ci.com/elymberopoulos/COMP474_JavaScript_UnitTests)
 
 ## Install and setup
     -1. Ensure you have Node.js installed and the environmental variables are setup correctly.
