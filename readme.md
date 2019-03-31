@@ -1,11 +1,11 @@
-#This the homework submission for Eric Lymberopoulos
+# This the homework submission for Eric Lymberopoulos
 
-##Install and setup
+## Install and setup
     -1. Ensure you have Node.js installed and the environmental variables are setup correctly.
     -2. In the root directory of the project type: "npm i" to install the dependencies for the project.
     -3. Run command 'npm run test' in the terminal and test output should be visible with coverage provided by NPM's nyc package.
 
-###Developing Black Box Tests
+### Developing Black Box Tests
     -This is a breakdown of the different internal functional requirements so new developers can write their own tests.
       1. Item getItem (String ItemID) - The mock database should have a getItem function that returns a price based
       on an item key.
@@ -16,27 +16,27 @@
       looking for item names and getting those items out of the database incrememnting the return price value.
     
 
-###Understanding Mocha Test Framework
+### Understanding Mocha Test Framework
     -In the test files there are 'describe' methods with a second parameter function.
     Additional describes can be placed in the second parameter function indefinitely. 
     These describes allow for test descriptions to be output in the terminal when the tests are run. 
     The assertions (actual tests) reside in the scope of the 'it' methods second parameter function.
     
 
-###NPM Packages
+### NPM Packages
     -"chai": "^4.2.0",
     -"mocha": "^5.2.0",
     -"nyc": "^13.3.0"
     
 
-#Resubmission HW1 Part 2
+# Resubmission HW1 Part 2
     -I have changed the literal value in the shopping cart function so that it now uses >= 10 instead of a different value (9).
     -The shopping cart function now has a "preamble" that describes its parameters and its output.
     -The old tests are in the old_HW_Tests directory.
     -I have added numerous BVA tests in the assignmentTests directory in the ShoppingCartBVA.js file.
 
-#Resubmission
-###Homework Tests
+# Resubmission
+### Homework Tests
     1. Test error handling
       -Test that error is thrown if shopping cart arguement is not of type Array (input of String)(output is an Error).
       -Test that error gets thrown if cart value is over 50 items in length (input of an Array of 51 items)(output is an Error).
@@ -49,5 +49,5 @@
       -Check rounding down - add two values to cart array (0.022 + 0.023) should equal 0.04.
       -Check rounding up - add two values to cart array (0.023 + 0.023) should equal 0.05.
 
-###Additional Tests
+### Additional Tests
     -(BVA) Empty array input should return 0 from the shopping cart calculate price function.
